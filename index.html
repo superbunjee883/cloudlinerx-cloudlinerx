@@ -9,6 +9,10 @@
 <meta property="og:description" content="Websites for Metro Vancouver local businesses. Free sample first. Call (604) 615-6160.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="og.png">
+<link rel="canonical" href="https://superbunjee883.github.io/cloudlinerx-cloudlinerx/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"CloudlinerX","description":"Websites for Metro Vancouver local businesses. Free sample site before you pay anything.","url":"https://superbunjee883.github.io/cloudlinerx-cloudlinerx/","telephone":"+1-604-615-6160","areaServed":"Metro Vancouver, BC","priceRange":"$$"}
+</script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%2316222E%22/><path d=%22M65 38a17 17 0 1 0 0 24%22 fill=%22none%22 stroke=%22%23E8A020%22 stroke-width=%2211%22 stroke-linecap=%22round%22/><circle cx=%2268%22 cy=%2268%22 r=%229%22 fill=%22%231B6DE0%22/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -74,6 +78,24 @@
   .offer-card.spot::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at var(--mx) var(--my),rgba(27,109,224,.13),transparent 70%);opacity:0;transition:opacity .5s ease;pointer-events:none}
   .offer-card.spot:hover::after,.offer-card.spot:focus-within::after{opacity:1}
   .sr-word{will-change:opacity,filter}
+  /* Industries marquee (LogoLoop-style: single seamless loop, pause on hover) */
+  .indy{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;background:var(--paper)}
+  .indy-track{display:flex;width:max-content;animation:indy 30s linear infinite}
+  .indy:hover .indy-track{animation-play-state:paused}
+  .indy-track span{padding:12px 4px;font-weight:800;font-size:.88rem;white-space:nowrap;color:var(--muted)}
+  .indy-track span::before{content:"•";color:var(--gold);margin:0 22px}
+  @keyframes indy{to{transform:translateX(-50%)}}
+  @media (prefers-reduced-motion:reduce){.indy-track{animation:none;flex-wrap:wrap;width:auto}}
+  /* Star CTA (ported from React Bits StarBorder) */
+  .btn-star{position:relative;display:inline-block;border-radius:12px;overflow:hidden;padding:2px;text-decoration:none;vertical-align:middle}
+  .btn-star .sg{position:absolute;width:300%;height:60%;border-radius:50%;opacity:.85;pointer-events:none;background:radial-gradient(circle,rgba(232,160,32,.95),transparent 12%)}
+  .btn-star .sg-b{bottom:-14px;right:-250%;animation:sg-b 5s linear infinite alternate}
+  .btn-star .sg-t{top:-14px;left:-250%;animation:sg-t 5s linear infinite alternate}
+  .btn-star-in{position:relative;z-index:1;display:inline-block;padding:12px 24px;min-height:48px;background:var(--blue);color:#fff;font-weight:800;font-size:.95rem;border-radius:10px}
+  .btn-star:hover .btn-star-in{background:var(--blue-dk)}
+  @keyframes sg-b{from{transform:translate(0,0);opacity:1}to{transform:translate(-100%,0);opacity:0}}
+  @keyframes sg-t{from{transform:translate(0,0);opacity:1}to{transform:translate(100%,0);opacity:0}}
+  @media (prefers-reduced-motion:reduce){.btn-star .sg{animation:none;opacity:0}}
   .offer-card h3{font-size:1.3rem;margin-bottom:8px}
   .offer-card p{color:var(--muted);font-size:.95rem}
   .offer-card ul{list-style:none;margin-top:16px;display:grid;gap:10px;font-size:.95rem}
@@ -170,7 +192,7 @@
   <div>
     <h1>We build your new site before you pay anything.</h1>
     <p class="sub">CloudlinerX makes websites for Metro Vancouver local businesses. You get a free sample of yours first. Like it, we talk price. Don't, you walk away.</p>
-    <div class="hero-cta"><a class="btn" href="#sample">Get a free sample</a><a class="quiet-link" href="#work">See our work first</a></div>
+    <div class="hero-cta"><a class="btn-star" href="#sample"><span class="sg sg-b" aria-hidden="true"></span><span class="sg sg-t" aria-hidden="true"></span><span class="btn-star-in">Get a free sample</span></a><a class="quiet-link" href="#work">See our work first</a></div>
     <p class="hero-note">Prefer talking? <a href="tel:+16046156160">(604) 615-6160</a> — a person answers.</p>
   </div>
   <div>
@@ -191,6 +213,11 @@
   <div><b><span data-count="3">3</span> live demos</b><span>real builds, click them above</span></div>
   <div><b><span data-count="4">4</span> edits/mo</b><span>hosting, SSL, fixes included</span></div>
   <div><b>Custom quote</b><span>priced on your site, never a menu</span></div>
+</div></div>
+
+<div class="indy" aria-label="Industries we build for"><div class="indy-track">
+  <span>Plumbers</span><span>Barbershops</span><span>Movers</span><span>Auto Repair</span><span>Dentists</span><span>Electricians</span><span>Restaurants</span><span>HVAC</span><span>Salons</span><span>Landscapers</span>
+  <span aria-hidden="true">Plumbers</span><span aria-hidden="true">Barbershops</span><span aria-hidden="true">Movers</span><span aria-hidden="true">Auto Repair</span><span aria-hidden="true">Dentists</span><span aria-hidden="true">Electricians</span><span aria-hidden="true">Restaurants</span><span aria-hidden="true">HVAC</span><span aria-hidden="true">Salons</span><span aria-hidden="true">Landscapers</span>
 </div></div>
 
 <section id="offer"><div class="wrap">
@@ -660,6 +687,34 @@
       card.style.setProperty('--my',((e.clientY-r.top)/r.height*100).toFixed(1)+'%');
     });
   });
+  // ClickSpark (ported from React Bits ClickSpark: gold burst on tap)
+  (function(){
+    var reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(reduced)return;
+    var c=document.createElement('canvas');c.setAttribute('aria-hidden','true');
+    c.style.cssText='position:fixed;inset:0;width:100vw;height:100vh;pointer-events:none;z-index:60;';
+    document.body.appendChild(c);
+    var ctx=c.getContext('2d'),sparks=[],running=false;
+    function size(){c.width=Math.floor(window.innerWidth);c.height=Math.floor(window.innerHeight);}
+    size();window.addEventListener('resize',size);
+    function draw(now){
+      ctx.clearRect(0,0,c.width,c.height);
+      sparks=sparks.filter(function(s){
+        var p=(now-s.t)/450;if(p>=1)return false;
+        var e=1-Math.pow(1-p,2),d=e*20,len=9*(1-e);
+        ctx.strokeStyle='#E8A020';ctx.lineWidth=2;ctx.beginPath();
+        ctx.moveTo(s.x+d*Math.cos(s.a),s.y+d*Math.sin(s.a));
+        ctx.lineTo(s.x+(d+len)*Math.cos(s.a),s.y+(d+len)*Math.sin(s.a));ctx.stroke();
+        return true;
+      });
+      if(sparks.length)requestAnimationFrame(draw);else running=false;
+    }
+    window.addEventListener('pointerdown',function(e){
+      var now=performance.now();
+      for(var i=0;i<8;i++)sparks.push({x:e.clientX,y:e.clientY,a:(2*Math.PI*i)/8,t:now});
+      if(!running){running=true;requestAnimationFrame(draw);}
+    },{passive:true});
+  })();
   // sample form
   var step=1,cur=null,label=document.getElementById('stepLabel');
   var names=['','Step 1 of 3 — Your business','Step 2 of 3 — Current site','Step 3 of 3 — Where to reach you'];
