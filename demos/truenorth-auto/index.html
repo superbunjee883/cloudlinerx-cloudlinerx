@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<!-- SAMPLE SITE — fictional business built as a CloudlinerX demo. Phone, address,
+     prices, and hours are illustrative. Replace with the real shop's details. -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>True North Auto Repair — Brakes, Oil & Inspections in Burnaby, BC</title>
+<meta name="description" content="True North Auto Repair in Burnaby, BC. Brakes from $149/axle, synthetic oil $89, BC inspections $129. Nothing over $50 without your approval. Call (604) 555-0134.">
+<meta property="og:title" content="True North Auto Repair — Burnaby, BC">
+<meta property="og:description" content="Brakes from $149/axle. Nothing over $50 without your approval. Call (604) 555-0134.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=1200&q=80">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2218%22 fill=%22%23191C20%22/><text x=%2250%22 y=%2270%22 font-size=%2254%22 text-anchor=%22middle%22 fill=%22%23FFC400%22 font-family=%22Arial Black%22>T</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bone:#F5F1E8; --card:#FFFFFF; --asphalt:#191C20; --carbon:#23272E;
+    --hivis:#FFC400; --hivis-dk:#8a6a00; --ink:#191C20; --muted:#5C6470; --steel:#8A9199;
+    --line:rgba(25,28,32,.14);
+    --radius:8px; --shadow:0 2px 12px rgba(25,28,32,.12);
+    --s1:8px; --s2:16px; --s3:24px; --s4:32px; --s5:48px; --s6:64px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+  body{font-family:'Barlow',system-ui,sans-serif;background:var(--bone);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Barlow Condensed',sans-serif;line-height:1.08;letter-spacing:.01em;text-transform:uppercase}
+  :focus-visible{outline:3px solid var(--hivis-dk);outline-offset:2px}
+  .wrap{width:min(1100px,100% - 32px);margin-inline:auto}
+  header{position:sticky;top:0;z-index:20;background:var(--bone);border-bottom:1px solid var(--line)}
+  .nav{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:10px;padding-bottom:10px}
+  .brand{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.3rem;letter-spacing:.02em}
+  .brand span{color:var(--hivis-dk)}
+  .nav-links{display:flex;gap:24px;font-size:.95rem;font-weight:600}
+  .nav-links a{color:inherit;text-decoration:none}
+  .nav-links a:hover{color:var(--hivis-dk)}
+  .btn{display:inline-block;padding:12px 24px;min-height:48px;border-radius:var(--radius);font-weight:700;font-size:.95rem;font-family:inherit;cursor:pointer;border:2px solid transparent;background:var(--asphalt);color:#fff;text-decoration:none}
+  .btn:hover{background:#000}
+  .btn:active{transform:translateY(1px)}
+  .btn-hi{background:var(--hivis);color:var(--asphalt)}
+  .btn-hi:hover{background:#e0ac00}
+  .btn-ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+  .btn:disabled{opacity:.6;cursor:wait}
+  /* mirrored split hero: photo left, copy right */
+  .hero{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;padding:var(--s5) 0 var(--s6)}
+  .hero-img{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line);position:relative}
+  .hero-img img{width:100%;height:420px;object-fit:cover;display:block}
+  .hero-img figcaption{position:absolute;left:16px;bottom:16px;background:var(--hivis);color:var(--asphalt);font-weight:700;font-size:.85rem;padding:8px 14px;border-radius:var(--radius)}
+  .hero h1{font-size:clamp(2.4rem,5vw,3.8rem);font-weight:700;max-width:12ch}
+  .hero .sub{color:var(--muted);margin:16px 0 24px;max-width:44ch;font-size:1.05rem}
+  .hero-cta{display:flex;gap:16px;flex-wrap:wrap}
+  .hero-meta{margin-top:16px;font-size:.9rem;color:var(--muted)}
+  .hero-meta a{color:var(--ink);font-weight:700}
+  /* dark proof band with slanted top */
+  .proof{background:var(--asphalt);color:#fff;clip-path:polygon(0 24px,100% 0,100% 100%,0 100%);padding:56px 0 32px;margin-top:-8px}
+  .proof .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+  .proof b{display:block;font-family:'Barlow Condensed',sans-serif;font-size:1.7rem;color:var(--hivis);text-transform:uppercase}
+  .proof span{font-size:.88rem;color:#B9BEC6}
+  section{padding:var(--s6) 0}
+  section h2{font-size:clamp(1.8rem,3.4vw,2.6rem);font-weight:700;margin-bottom:8px}
+  .lede{color:var(--muted);max-width:60ch;margin-bottom:var(--s4)}
+  .svc{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+  .svc article{background:var(--card);border:1px solid var(--line);border-top:6px solid var(--hivis);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px}
+  .svc h3{font-size:1.4rem;margin-bottom:4px}
+  .svc .from{font-family:'Barlow',sans-serif;font-weight:700;color:var(--hivis-dk);font-size:.92rem}
+  .svc p{color:var(--muted);font-size:.94rem;margin-top:8px}
+  .band{background:var(--asphalt);color:#fff;border-radius:var(--radius);padding:32px;display:flex;gap:32px;flex-wrap:wrap;justify-content:space-between;align-items:center;clip-path:polygon(0 0,100% 0,100% calc(100% - 0px),0 100%)}
+  .band strong{font-family:'Barlow Condensed',sans-serif;font-size:1.5rem;text-transform:uppercase}
+  .band strong em{font-style:normal;color:var(--hivis)}
+  .band p{color:#B9BEC6;font-size:.95rem}
+  .faq details{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px;margin-bottom:16px;max-width:720px}
+  .faq summary{font-weight:700;cursor:pointer;font-size:1rem}
+  .faq details p{color:var(--muted);margin-top:8px;font-size:.95rem}
+  .form-shell{background:var(--card);border:1px solid var(--line);border-top:6px solid var(--hivis);border-radius:var(--radius);box-shadow:var(--shadow);padding:32px;max-width:640px}
+  .steps{display:flex;gap:8px;margin-bottom:8px}
+  .steps i{height:6px;flex:1;border-radius:99px;background:#E4DDCE}
+  .steps i.on{background:var(--hivis)}
+  .step-label{font-size:.85rem;font-weight:600;color:var(--muted);margin-bottom:24px}
+  fieldset{border:0;display:none}
+  fieldset.active{display:block}
+  label{display:block;font-weight:600;font-size:.9rem;margin:16px 0 8px}
+  label:first-child{margin-top:0}
+  input,select,textarea{width:100%;padding:12px 14px;min-height:48px;border:1.5px solid var(--line);border-radius:var(--radius);font:inherit;background:var(--bone);color:var(--ink)}
+  input:focus,select:focus,textarea:focus{outline:3px solid var(--hivis-dk);outline-offset:1px;border-color:var(--hivis-dk)}
+  .chips{display:flex;gap:12px;flex-wrap:wrap}
+  .chip{border:1.5px solid var(--line);background:var(--bone);border-radius:var(--radius);padding:12px 16px;min-height:48px;font:inherit;font-weight:600;cursor:pointer;color:var(--ink)}
+  .chip[aria-pressed="true"]{border-color:var(--asphalt);background:#FFF3D1}
+  .form-nav{display:flex;gap:16px;margin-top:24px}
+  .err{color:#B42318;font-size:.85rem;min-height:1.2em;margin-top:8px}
+  .success{display:none;text-align:center;padding:24px 0}
+  footer{background:var(--asphalt);color:#B9BEC6;padding:32px 0;font-size:.9rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  footer a{color:#fff;font-weight:700}
+  @media (max-width:900px){.hero,.svc{grid-template-columns:1fr}.nav-links{display:none}.proof .wrap{grid-template-columns:repeat(2,1fr)}.hero-img img{height:260px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <div class="brand">True North <span>Auto</span></div>
+  <nav class="nav-links" aria-label="Primary"><a href="#services">Services</a><a href="#faq">Questions</a><a href="#book">Book in</a></nav>
+  <a class="btn" href="tel:+16045550134">Call (604) 555-0134</a>
+</div></header>
+
+<div class="wrap hero">
+  <figure class="hero-img">
+    <img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=1200&q=80" alt="Mechanic inspecting a car engine in a clean shop" fetchpriority="high">
+    <figcaption>Real shop, real techs — no upsell scripts</figcaption>
+  </figure>
+  <div>
+    <h1>Brakes, oil, inspections. Quoted before we wrench.</h1>
+    <p class="sub">Burnaby's straight-talking auto shop. Nothing over $50 happens without your approval, and every job leaves with a 12-month warranty.</p>
+    <div class="hero-cta"><a class="btn btn-hi" href="#book">Book my visit</a><a class="btn btn-ghost" href="#services">See prices</a></div>
+    <p class="hero-meta">4210 Hastings St, Burnaby · Mon–Fri 8am–6pm, Sat 9am–3pm · <a href="tel:+16045550134">(604) 555-0134</a></p>
+  </div>
+</div>
+
+<div class="proof"><div class="wrap">
+  <div><b>$50 rule</b><span>nothing beyond that without your yes</span></div>
+  <div><b>12-month</b><span>warranty on parts and labour</span></div>
+  <div><b>Same-day</b><span>most brakes and oil done by 5pm</span></div>
+  <div><b>Free</b><span>diagnostic with any repair</span></div>
+</div></div>
+
+<section id="services"><div class="wrap">
+  <h2>Menu pricing, right on the page.</h2>
+  <p class="lede">The jobs we do daily, at the price you'll actually pay. Anything else gets a written quote before a bolt turns.</p>
+  <div class="svc">
+    <article><h3>Brake pads &amp; rotors <span class="from">from $149/axle</span></h3><p>Pads, rotors machined or replaced, calipers checked. Most cars out same day.</p></article>
+    <article><h3>Synthetic oil change <span class="from">$89</span></h3><p>Full synthetic, filter, 21-point check, washer fluid top-up. 30 minutes.</p></article>
+    <article><h3>BC safety inspection <span class="from">$129</span></h3><p>Out-of-province and private-sale inspections with the paperwork done right.</p></article>
+    <article><h3>Diagnostics <span class="from">free with repair</span></h3><p>Check-engine light, weird noises, mystery vibrations. $95 standalone, waived when we fix it.</p></article>
+  </div>
+</div></section>
+
+<section id="visit" style="padding-top:0"><div class="wrap">
+  <div class="band">
+    <div><strong>Need it today? <em>Call before 10am.</em></strong><p>Same-day slots for brakes, oil, and inspections — plus a free Hastings shuttle.</p></div>
+    <a class="btn btn-hi" href="tel:+16045550134">Call the shop</a>
+  </div>
+</div></section>
+
+<section class="faq" id="faq" style="padding-top:0"><div class="wrap">
+  <h2>Asked at every counter.</h2>
+  <p class="lede">The upsell fear is real. Here's how this shop answers it.</p>
+  <details><summary>Will you call before doing extra work?</summary><p>Every time. Nothing over $50 happens without your explicit yes — by phone or text, your choice. The quote you approve is the invoice you pay.</p></details>
+  <details><summary>OEM or aftermarket parts?</summary><p>Your call. We quote both, explain the difference in plain terms, and warranty either for 12 months or 20,000km.</p></details>
+  <details><summary>Do I have to wait around?</summary><p>No. Free shuttle along Hastings, or we text you when it's ready. Most oil and brake jobs are done by 5pm same day.</p></details>
+</div></section>
+
+<section id="book" style="padding-top:0"><div class="wrap">
+  <h2>Book in 3 steps.</h2>
+  <p class="lede">Tell us the symptom, pick a day, leave your number. We confirm by text within one business hour.</p>
+  <div class="form-shell">
+    <div class="steps" aria-hidden="true"><i id="t1" class="on"></i><i id="t2"></i><i id="t3"></i></div>
+    <p class="step-label" id="stepLabel">Step 1 of 3 — What's going on?</p>
+    <form id="bookForm" novalidate>
+      <fieldset class="active" data-step="1">
+        <label id="symLabel">Pick the closest symptom</label>
+        <div class="chips" role="group" aria-labelledby="symLabel" id="symChips">
+          <button type="button" class="chip" data-s="Brakes / grinding" aria-pressed="false">Brakes / grinding</button>
+          <button type="button" class="chip" data-s="Oil / warning light" aria-pressed="false">Oil / warning light</button>
+          <button type="button" class="chip" data-s="Inspection" aria-pressed="false">Inspection</button>
+          <button type="button" class="chip" data-s="Weird noise" aria-pressed="false">Weird noise</button>
+          <button type="button" class="chip" data-s="Something else" aria-pressed="false">Something else</button>
+        </div>
+        <label for="car">Your vehicle</label><input id="car" placeholder="2018 Civic, 140k km">
+        <p class="err" id="g1" role="alert"></p>
+        <div class="form-nav"><button type="button" class="btn" data-next>Continue</button></div>
+      </fieldset>
+      <fieldset data-step="2">
+        <label for="day">Preferred day</label>
+        <select id="day"><option>Tomorrow morning (drop off 8–9am)</option><option>Tomorrow afternoon</option><option>Saturday morning</option><option>Next week is fine</option></select>
+        <label for="note">Anything we should know? (optional)</label>
+        <textarea id="note" rows="3" placeholder="Squeal started last week, worse when cold…"></textarea>
+        <div class="form-nav"><button type="button" class="btn btn-ghost" data-back>Back</button><button type="button" class="btn" data-next>Continue</button></div>
+      </fieldset>
+      <fieldset data-step="3">
+        <label for="nm">Name</label><input id="nm" autocomplete="name" placeholder="Jordan">
+        <label for="ph">Phone</label><input id="ph" type="tel" autocomplete="tel" placeholder="(604) 555-0000">
+        <p class="err" id="g3" role="alert"></p>
+        <div class="form-nav"><button type="button" class="btn btn-ghost" data-back>Back</button><button type="submit" class="btn btn-hi" id="goBtn">Request my slot</button></div>
+      </fieldset>
+    </form>
+    <div class="success" id="ok"><h3>Request received.</h3><p id="okText">We will text you to confirm.</p><p style="color:var(--muted);font-size:.88rem;margin-top:8px">Demo sample — connect a real inbox before going live.</p></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <span>© 2026 True North Auto Repair, Burnaby, BC. All rights reserved.</span>
+  <span>4210 Hastings St · <a href="tel:+16045550134">(604) 555-0134</a> · Mon–Fri 8–6, Sat 9–3</span>
+</div></footer>
+
+<script>
+(function(){
+  var step=1,sym=null,label=document.getElementById('stepLabel');
+  var names=['','Step 1 of 3 — What is going on?','Step 2 of 3 — When works?','Step 3 of 3 — Where do we reach you?'];
+  function show(n){step=n;document.querySelectorAll('#bookForm fieldset').forEach(function(f){f.classList.toggle('active',+f.dataset.step===n)});['t1','t2','t3'].forEach(function(id,i){document.getElementById(id).classList.toggle('on',i<n)});label.textContent=names[n];}
+  document.getElementById('symChips').addEventListener('click',function(e){var b=e.target.closest('.chip');if(!b)return;document.querySelectorAll('#symChips .chip').forEach(function(c){c.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');sym=b.dataset.s;});
+  document.querySelectorAll('#bookForm [data-next]').forEach(function(b){b.addEventListener('click',function(){
+    if(step===1){if(!sym){document.getElementById('g1').textContent='Pick the closest symptom to continue.';return;}if(document.getElementById('car').value.trim().length<2){document.getElementById('g1').textContent='Add your vehicle so we pull the right parts.';return;}document.getElementById('g1').textContent='';}
+    show(Math.min(3,step+1));});});
+  document.querySelectorAll('#bookForm [data-back]').forEach(function(b){b.addEventListener('click',function(){show(Math.max(1,step-1))})});
+  document.getElementById('bookForm').addEventListener('submit',function(e){e.preventDefault();
+    var nm=document.getElementById('nm').value.trim(),ph=document.getElementById('ph').value.replace(/\D/g,'');
+    if(nm.length<2){document.getElementById('g3').textContent='Add your name.';return;}
+    if(ph.length<10){document.getElementById('g3').textContent='Add a 10-digit phone number.';return;}
+    document.getElementById('g3').textContent='';
+    var btn=document.getElementById('goBtn');btn.disabled=true;btn.textContent='Sending…';
+    setTimeout(function(){document.getElementById('bookForm').style.display='none';document.getElementById('ok').style.display='block';document.getElementById('okText').textContent='Thanks '+nm+' — '+sym+', '+document.getElementById('day').value.split(' (')[0]+'. Confirmation text on its way.';label.textContent='Done.';},900);});
+})();
+</script>
+</body>
+</html>
