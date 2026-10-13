@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tea Origin 茗外 · Tea Store in Richmond, BC</title>
+<meta name="description" content="Tea Origin 茗外, a tea store in Richmond, BC. Dine-in tea and desserts, tea and tea ware to take home. Hours, location and contact.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Serif+SC:wght@500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Tea Origin 茗外",
+  "description": "Tea store in Richmond, BC with dine-in tea and desserts, and tea and tea ware to take home.",
+  "telephone": "+1-604-285-9699",
+  "email": "info@teaorigin.ca",
+  "url": "https://www.teaorigin.ca/",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "6833 Buswell St #135",
+    "addressLocality": "Richmond",
+    "addressRegion": "BC",
+    "postalCode": "V6Y 0L3",
+    "addressCountry": "CA"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday","Thursday"], "opens": "12:00", "closes": "21:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "12:00", "closes": "22:00" }
+  ],
+  "sameAs": ["https://www.instagram.com/tea_ori_gin/"]
+}
+</script>
+<style>
+  :root {
+    --paper:#f3eee2; --paper2:#e9e2d0; --ink:#1c2a22; --muted:#5b665e;
+    --green:#24402f; --green2:#34573f; --brass:#a9772c; --card:#fbf8f0; --line:#d8cfb9;
+    --serif:"Cormorant Garamond", Georgia, "Times New Roman", serif;
+    --cjk:"Noto Serif SC", "Songti SC", serif;
+  }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { margin:0; background:var(--paper); color:var(--ink); font:17px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif; -webkit-font-smoothing:antialiased; }
+  a { color:var(--green); text-underline-offset:3px; }
+  :focus-visible { outline:3px solid var(--brass); outline-offset:3px; border-radius:4px; }
+  .wrap { max-width:1000px; margin:0 auto; padding:0 20px; }
+  .zh { font-family:var(--cjk); }
+
+  /* Hero */
+  .hero { position:relative; background:var(--green); color:#f3eee2; overflow:hidden; padding:56px 0 72px; }
+  .hero .ghost { position:absolute; right:-10px; top:-30px; font:700 clamp(9rem,38vw,22rem)/1 var(--cjk); color:#fff; opacity:.06; letter-spacing:-.05em; user-select:none; pointer-events:none; writing-mode:vertical-rl; }
+  .eyebrow { font-size:.8rem; letter-spacing:.22em; text-transform:uppercase; color:#cdbd93; margin:0 0 18px; }
+  h1 { font:600 clamp(2.6rem,9vw,5.2rem)/1 var(--serif); margin:0 0 6px; letter-spacing:-.01em; }
+  h1 .zh { font-size:.62em; font-weight:500; color:#e2cf9a; margin-left:.25em; }
+  .lede { max-width:30em; font-size:1.15rem; color:#dcd6c4; margin:18px 0 28px; }
+  .actions { display:flex; flex-wrap:wrap; gap:12px; align-items:center; }
+  .btn { display:inline-flex; align-items:center; min-height:48px; padding:0 24px; border-radius:999px; font-weight:600; text-decoration:none; letter-spacing:.01em; }
+  .btn.primary { background:#e2cf9a; color:var(--green); }
+  .btn.ghost { border:1.5px solid #8fa293; color:#f3eee2; }
+  .status { margin-top:26px; display:inline-flex; align-items:center; gap:10px; font-size:.95rem; color:#dcd6c4; }
+  .dot { width:10px; height:10px; border-radius:50%; background:#8fa293; }
+  .status.open .dot { background:#8fd18f; }
+  .rating { margin-top:22px; font-family:var(--serif); font-size:1.35rem; color:#e2cf9a; }
+  .rating small { font:400 .9rem system-ui,sans-serif; color:#b9c2b8; margin-left:6px; }
+
+  /* Sections */
+  section { padding:64px 0; }
+  h2 { font:600 clamp(1.9rem,5vw,2.8rem)/1.1 var(--serif); margin:0 0 10px; color:var(--green); }
+  .kicker { font-size:.78rem; letter-spacing:.2em; text-transform:uppercase; color:var(--brass); margin:0 0 10px; }
+  .sub { color:var(--muted); max-width:36em; margin:0 0 34px; }
+
+  /* Offerings: editorial numbered list */
+  .offer { list-style:none; margin:0; padding:0; border-top:1px solid var(--line); }
+  .offer li { display:grid; grid-template-columns:3.2rem 1fr; gap:6px 14px; padding:22px 0; border-bottom:1px solid var(--line); }
+  .offer .n { font:500 2rem/1 var(--serif); color:var(--brass); }
+  .offer h3 { margin:0; font:600 1.45rem/1.2 var(--serif); }
+  .offer p { margin:4px 0 0; color:var(--muted); grid-column:2; }
+
+  /* People mention */
+  .band { background:var(--paper2); }
+  .mention { display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); }
+  .mention div { background:var(--card); border:1px solid var(--line); border-radius:6px; padding:20px; }
+  .mention h3 { margin:0 0 6px; font:600 1.35rem/1.2 var(--serif); color:var(--green); }
+  .mention p { margin:0; color:var(--muted); font-size:.95rem; }
+  .mention .big { font:600 2.6rem/1 var(--serif); color:var(--brass); display:block; margin-bottom:6px; }
+
+  /* Sourcing */
+  .source { display:grid; gap:28px; }
+  .source blockquote { margin:0; padding-left:20px; border-left:3px solid var(--brass); font:italic 500 1.35rem/1.45 var(--serif); color:var(--green); }
+  .source ul { margin:0; padding-left:20px; color:var(--muted); }
+  .src-note { font-size:.85rem; color:var(--muted); margin-top:14px; }
+
+  /* Reviews */
+  .reviews { background:var(--green); color:#f3eee2; }
+  .reviews h2 { color:#f3eee2; }
+  .reviews .kicker { color:#cdbd93; }
+  .score { font:600 4rem/1 var(--serif); color:#e2cf9a; }
+  .score small { font:400 1rem system-ui,sans-serif; color:#b9c2b8; display:block; margin-top:6px; }
+  .quotes { display:grid; gap:18px; margin-top:28px; }
+  figure { margin:0; padding:22px; background:var(--green2); border-radius:6px; }
+  figure blockquote { margin:0 0 12px; font:500 1.3rem/1.4 var(--serif); }
+  figcaption { font-size:.85rem; color:#b9c2b8; }
+
+  /* Visit */
+  .visit { display:grid; gap:36px; }
+  table { border-collapse:collapse; width:100%; max-width:380px; }
+  th, td { text-align:left; padding:10px 0; border-bottom:1px solid var(--line); font-weight:400; }
+  th { color:var(--muted); }
+  td { text-align:right; font-variant-numeric:tabular-nums; }
+  address { font-style:normal; }
+  .contact p { margin:0 0 6px; }
+  .links { display:flex; flex-wrap:wrap; gap:12px; margin-top:18px; }
+  .links .btn { background:var(--green); color:#f3eee2; }
+  .links .btn.alt { background:transparent; border:1.5px solid var(--green); color:var(--green); }
+
+  footer { background:var(--paper2); padding:30px 0 40px; font-size:.88rem; color:var(--muted); }
+
+  @media (min-width:760px) {
+    .source { grid-template-columns:1fr 1fr; align-items:start; }
+    .quotes { grid-template-columns:repeat(3,1fr); }
+    .visit { grid-template-columns:1fr 1fr; }
+    .offer li { grid-template-columns:4.5rem 16rem 1fr; align-items:baseline; }
+    .offer p { grid-column:auto; margin:0; }
+  }
+  @media (prefers-reduced-motion:no-preference) {
+    .btn { transition:transform .18s ease, background .18s ease; }
+    .btn:hover { transform:translateY(-2px); }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <span class="ghost zh" aria-hidden="true">茗外</span>
+  <div class="wrap">
+    <p class="eyebrow">Tea store · Richmond, BC</p>
+    <h1>Tea Origin<span class="zh" lang="zh">茗外</span></h1>
+    <p class="lede">A tea store with dine-in tea and desserts, plus tea and tea ware to take home.</p>
+    <div class="actions">
+      <a class="btn primary" href="tel:+16042859699">Call (604) 285-9699</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&amp;query=6833+Buswell+St+%23135+Richmond+BC+V6Y+0L3">Get directions</a>
+    </div>
+    <div class="status" id="status" role="status"><span class="dot"></span><span id="status-text">Hours below</span></div>
+    <div class="rating">4.9 <small>from 198 Google reviews</small></div>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="wrap">
+      <p class="kicker">What's here</p>
+      <h2>Come for tea, stay for dessert.</h2>
+      <p class="sub">Five ways to enjoy Tea Origin, from a quiet table to a box of tea at home.</p>
+      <ol class="offer">
+        <li><span class="n">01</span><h3>Dine in</h3><p>Tea and dessert at the shop. Reviewers describe a calm, elegant room.</p></li>
+        <li><span class="n">02</span><h3>Take tea home</h3><p>Tea products and tea ware are sold in the store.</p></li>
+        <li><span class="n">03</span><h3>Pickup and delivery</h3><p>Curbside pickup and no-contact delivery are listed on Google.</p></li>
+        <li><span class="n">04</span><h3>Membership and gifts</h3><p>A membership card and gift cards are offered, per the shop's website.</p></li>
+        <li><span class="n">05</span><h3>Events and large orders</h3><p>Tea and dessert service for corporate events, weddings and celebrations, plus custom packaging for large orders.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <p class="kicker">What people mention</p>
+      <h2>Worth ordering, according to reviews.</h2>
+      <p class="sub">Drawn from the topics and drinks that come up most in Google reviews.</p>
+      <div class="mention">
+        <div><span class="big">52</span><h3>Desserts</h3><p>The most-mentioned topic in reviews.</p></div>
+        <div><span class="big">24</span><h3>Tea selection</h3><p>Mentioned in 24 reviews.</p></div>
+        <div><h3>Spring Equinox</h3><p>A reviewer called it light, floral and refreshing.</p></div>
+        <div><h3>Imperial Pu-erh</h3><p>One reviewer got to try it as a sample.</p></div>
+        <div><h3>Nitro tea <span class="zh" lang="zh">氮气茶</span></h3><p>Mentioned in 6 reviews.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap source">
+      <div>
+        <p class="kicker">Where the tea comes from</p>
+        <h2>Checked before it's poured.</h2>
+        <blockquote>The team inspects farms on site, and the teas are tested before they reach the shelf.</blockquote>
+      </div>
+      <div>
+        <ul>
+          <li>Pure teas go through 72-item testing by Intertek, covering pesticide residues and heavy metals.</li>
+          <li>Floral teas are tested for 12 pesticide residue items.</li>
+          <li>Farm inspections and interviews happen on site.</li>
+        </ul>
+        <p class="src-note">Information from the Tea Origin website.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <div class="wrap">
+      <p class="kicker">Reviews</p>
+      <div class="score">4.9<small>average from 198 Google reviews</small></div>
+      <div class="quotes">
+        <figure><blockquote>“Such a lovely and peaceful tea spot in Richmond.”</blockquote><figcaption>N!ta zzZ, Google review</figcaption></figure>
+        <figure><blockquote>“Tea Origin is honestly one of the most underrated spots in Richmond.”</blockquote><figcaption>Dana B, Google review</figcaption></figure>
+        <figure><blockquote>“Great selection of tea, good atmosphere, very friendly staff.”</blockquote><figcaption>Google review</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit">
+    <div class="wrap visit">
+      <div>
+        <p class="kicker">Visit</p>
+        <h2>Find us on Buswell Street.</h2>
+        <address>6833 Buswell St #135<br>Richmond, BC V6Y 0L3</address>
+        <div class="links">
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=6833+Buswell+St+%23135+Richmond+BC+V6Y+0L3">Open in Google Maps</a>
+          <a class="btn alt" href="tel:+16042859699">Call</a>
+        </div>
+      </div>
+      <div class="contact">
+        <table aria-label="Opening hours">
+          <tr><th scope="row">Sunday to Thursday</th><td>12 p.m. to 9 p.m.</td></tr>
+          <tr><th scope="row">Friday and Saturday</th><td>12 p.m. to 10 p.m.</td></tr>
+        </table>
+        <p style="margin-top:22px"><a href="tel:+16042859699">(604) 285-9699</a></p>
+        <p><a href="mailto:info@teaorigin.ca">info@teaorigin.ca</a></p>
+        <p><a href="https://www.instagram.com/tea_ori_gin/">Instagram: @tea_ori_gin</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">Sample website concept for Tea Origin 茗外, made as a free example. Not the official site and not yet live. Hours and details come from the shop's website and Google listing; please confirm before visiting.</div>
+</footer>
+
+<script>
+(function () {
+  try {
+    var hours = { Sun:[12,21], Mon:[12,21], Tue:[12,21], Wed:[12,21], Thu:[12,21], Fri:[12,22], Sat:[12,22] };
+    var parts = new Intl.DateTimeFormat("en-US", { timeZone:"America/Vancouver", weekday:"short", hour:"numeric", minute:"numeric", hour12:false }).formatToParts(new Date());
+    var day = "", h = 0, m = 0;
+    parts.forEach(function (p) {
+      if (p.type === "weekday") day = p.value;
+      if (p.type === "hour") h = parseInt(p.value, 10) % 24;
+      if (p.type === "minute") m = parseInt(p.value, 10);
+    });
+    var span = hours[day]; if (!span) return;
+    var now = h + m / 60, el = document.getElementById("status"), txt = document.getElementById("status-text");
+    var fmt = function (x) { return (x > 12 ? x - 12 : x) + " p.m."; };
+    if (now >= span[0] && now < span[1]) { el.className = "status open"; txt.textContent = "Open now, until " + fmt(span[1]); }
+    else if (now < span[0]) { txt.textContent = "Opens today at 12 p.m."; }
+    else { txt.textContent = "Closed for today. See hours below."; }
+  } catch (e) {}
+})();
+</script>
+</body>
+</html>
